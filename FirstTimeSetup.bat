@@ -18,4 +18,3 @@ IF %nbProjects% GTR 1 (
 		echo !project!>> projects.txt
 	)
 )
-pause
