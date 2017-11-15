@@ -7,7 +7,7 @@
 set /p email=< data\email.txt
 set /p location=< data\location.txt
 set /p username=< data\username.txt
-start /w "%ProgramFiles%\Git\git-bash.exe" git config --global user.email "%email%"
+start /w "%ProgramFiles%\Git\git-bash.exe" git config --global user.email "%email%" & git config --global user.name "%username%"
 for /F "tokens=*" %%P in (data\projects.txt) do (
 	cd /D %USERPROFILE%\%location%\
 	start /w "%ProgramFiles%\Git\git-bash.exe" git clone https://github.com/%username%/%%P.git
